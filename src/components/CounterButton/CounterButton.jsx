@@ -3,9 +3,13 @@ import styles from './CounterButton.module.css'
 import MenuItem from '../MenuItem/MenuItem';
 
 
-const CounterButton = () => {
+const CounterButton = ({itemQuantity, addItemToCart}) => {
   return (
-	<div>CounterButton</div>
+    <div className={styles.addToCartButtonActive}>
+      <button className={styles.addToCartDecrement}>-</button>
+      <span>{itemQuantity}</span>
+      <button onClick={addItemToCart} className={styles.addToCartIncrement}>+</button>
+    </div>
     
   )
 }

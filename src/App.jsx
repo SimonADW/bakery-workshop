@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import "../src/assets/styles/reset.css"
+import "../src/assets/styles/variables.css"
 import MenuList from "./components/MenuList/MenuList";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 
 function App() {
 	const [cartContent, setCartContent] = useState([]);
+	const [addToCartButtonActive, setAddToCartButtonActive] = useState(null);
 
 	return (
 		<>
@@ -12,6 +15,8 @@ function App() {
 				<MenuList
 					cartContent={cartContent}
 					setCartContent={setCartContent}
+					addToCartButtonActive={addToCartButtonActive}
+					setAddToCartButtonActive={setAddToCartButtonActive}
 				/>
 			</section>
 
