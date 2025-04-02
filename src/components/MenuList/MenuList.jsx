@@ -23,7 +23,7 @@ const MenuList = ({
 							setCartContent={setCartContent}
 							addToCartButtonActive={addToCartButtonActive}
 							setAddToCartButtonActive={setAddToCartButtonActive}
-              itemQuantity={cartContent.find((cartItem)=> cartItem.menuItemNum === item.id)?.qty || 0}
+             				itemQuantity={cartContent.find((cartItem)=> cartItem.menuItemNum === item.id)?.qty || 0}
 						/>
 					);
 				})}
